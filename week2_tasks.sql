@@ -47,3 +47,23 @@ BEGIN
 END //
 
 call CancelOrder(4);
+
+-- Bookings Task 1
+select * from LittleLemonDB.Booking;
+
+-- Task 2
+
+drop procedure CheckBooking;
+DELIMITER //
+
+create procedure CheckBooking(IN checkIfBooked INT, OUT result varchar(50))
+BEGIN
+ SET @v := (select count(*) from LittleLemonDB.Booking);
+ if @v > 0 THEN
+	SET result = CONCAT("Table ", checkIfBooked, " is already booked");
+ else SET result = "Table is available";
+ END IF;
+END //
+
+call CheckBooking(99, @result);
+select @result;

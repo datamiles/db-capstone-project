@@ -1,0 +1,2 @@
+"concat('booking ', bookingID, ' cancelled')"
+"booking 115 cancelled"
