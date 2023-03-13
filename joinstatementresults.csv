@@ -1,0 +1,4 @@
+CustomerID,FullName,OrderID,total_cost,CuisineName,CourseName
+1,Snasir,1,200,Pak,PakLunch
+2,Shani,2,155,Turk,TurkLunch
+1,Snasir,3,35,Pak,PakLunch
